@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="parentBook" class="com.netcracker.inheritance.Book1" scope="prototype">
+        <property name="title" value="Harry Potter and The Philosopher's Stone"/>
+        <property name="author" value="J. K. Rowling"/>
+        <property name="pages" value="546"/>
+        <property name="year" value="1997"/>
+    </bean>
+
+    <bean id="childBook" class="com.netcracker.inheritance.Book2" scope="prototype" parent="parentBook">
+        <property name="title" value="Harry Potter and The Chamber of Secrets"/>
+        <property name="year" value="1998"/>
+        <property name="language" value="English"/>
+    </bean>
+
+</beans>

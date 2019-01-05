@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/spring-config.xml</file>
+          <file>file://$MODULE_DIR$/resources/injectingtypes-config.xml</file>
+          <file>file://$MODULE_DIR$/resources/collectioninjecting-config.xml</file>
+          <file>file://$MODULE_DIR$/resources/inheritance-config.xml</file>
+          <file>file://$MODULE_DIR$/resources/spel-config.xml</file>
+          <file>file://$MODULE_DIR$/resources/autowiring-bytype-config.xml</file>
+          <file>file://$MODULE_DIR$/resources/autowiring-byname-config.xml</file>
+          <file>file://$MODULE_DIR$/resources/autowiting-constructor-config.xml</file>
+          <file>file://$MODULE_DIR$/resources/factory-config.xml</file>
+          <file>file://$MODULE_DIR$/resources/lookup-config.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Spring-4.3.18.RELEASE" level="project" />
+  </component>
+</module>

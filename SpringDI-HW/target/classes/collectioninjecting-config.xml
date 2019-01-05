@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Constructor-based DI -->
+
+    <bean id="bookList" class="com.netcracker.collectioninjecting.ci.BookList" scope="prototype">
+        <constructor-arg>
+            <list>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+                <ref bean="book3"/>
+                <ref bean="book4"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="bookSet" class="com.netcracker.collectioninjecting.ci.BookSet" scope="prototype">
+        <constructor-arg>
+            <set>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+                <ref bean="book3"/>
+                <ref bean="book4"/>
+            </set>
+        </constructor-arg>
+    </bean>
+
+    <bean id="book1" class="com.netcracker.injectingtypes.ci.Book" scope="prototype">
+        <constructor-arg ref="klever"/>
+        <constructor-arg value="1200"/>
+        <constructor-arg value="Rus-Eng Dictionary"/>
+    </bean>
+    <bean id="book2" class="com.netcracker.injectingtypes.ci.Book" scope="prototype">
+        <constructor-arg ref="klever"/>
+        <constructor-arg value="900"/>
+        <constructor-arg value="BookTitle1"/>
+    </bean>
+    <bean id="book3" class="com.netcracker.injectingtypes.ci.Book" scope="prototype">
+        <constructor-arg ref="bloomsbury"/>
+        <constructor-arg value="300"/>
+        <constructor-arg value="BookTitle3"/>
+    </bean>
+    <bean id="book4" class="com.netcracker.injectingtypes.ci.Book" scope="prototype">
+        <constructor-arg ref="bloomsbury"/>
+        <constructor-arg value="300"/>
+        <constructor-arg value="BookTitle3"/>
+    </bean>
+
+    <bean id="myMap" class="com.netcracker.collectioninjecting.ci.MyMap" scope="prototype">
+        <constructor-arg>
+            <map>
+                <entry key="1" value="BMW"/>
+                <entry key="2" value="Audi"/>
+                <entry key="3" value="VW"/>
+                <entry key="4" value="Lada"/>
+                <entry key="5" value="Aston Martin"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <!-- Setter-based DI -->
+
+    <bean id="bookListSI" class="com.netcracker.collectioninjecting.si.BookList" scope="prototype">
+        <property name="list">
+            <list>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+                <ref bean="book3"/>
+                <ref bean="book4"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="bookSetSI" class="com.netcracker.collectioninjecting.si.BookSet" scope="prototype">
+        <property name="set">
+            <set>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+                <ref bean="book3"/>
+                <ref bean="book4"/>
+            </set>
+        </property>
+    </bean>
+<!--
+    <bean id="book1" class="com.netcracker.injectingtypes.ci.Book1" scope="prototype">
+        <constructor-arg ref="klever"/>
+        <constructor-arg value="1200"/>
+        <constructor-arg value="Rus-Eng Dictionary"/>
+    </bean>
+    <bean id="book2" class="com.netcracker.injectingtypes.ci.Book1" scope="prototype">
+        <constructor-arg ref="klever"/>
+        <constructor-arg value="900"/>
+        <constructor-arg value="BookTitle1"/>
+    </bean>
+    <bean id="book3" class="com.netcracker.injectingtypes.ci.Book1" scope="prototype">
+        <constructor-arg ref="bloomsbury"/>
+        <constructor-arg value="300"/>
+        <constructor-arg value="BookTitle3"/>
+    </bean>
+    <bean id="book4" class="com.netcracker.injectingtypes.ci.Book1" scope="prototype">
+        <constructor-arg ref="bloomsbury"/>
+        <constructor-arg value="300"/>
+        <constructor-arg value="BookTitle3"/>
+    </bean>
+-->
+    <bean id="myMapSI" class="com.netcracker.collectioninjecting.si.MyMap" scope="prototype">
+        <property name="carMap">
+            <map>
+                <entry key="1" value="BMW"/>
+                <entry key="2" value="Audi"/>
+                <entry key="3" value="VW"/>
+                <entry key="4" value="Lada"/>
+                <entry key="5" value="Aston Martin"/>
+            </map>
+        </property>
+    </bean>
+
+
+
+</beans>
